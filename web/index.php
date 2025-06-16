@@ -5,7 +5,7 @@ if ($conn->connect_error) exit();
 
 $result = $conn->query("SELECT * FROM mesures");
 
-echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><link rel="stylesheet" href="style.css"></head><body>';
+echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="refresh" content="5"><link rel="stylesheet" href="style.css"></head><body>';
 echo '<h2>Données enregistrées</h2>';
 echo '<table><tr><th>ID</th><th>Horodatage</th><th>Valeur</th></tr>';
 
