@@ -1,28 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  table {
-    width: 80%;
-    margin: auto;
-    border-collapse: collapse;
-    background-color: white;
-  }
-  
-  th, td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ccc;
-  }
-  
-  th {
-    background-color: #333;
-    color: white;
-  }
-  
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.5s ease;
+  background-color: #f8d7da; /* par défaut : rouge clair */
+  color: #721c24;
+}
+
+body.vert {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+body.rouge {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.container {
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.carte {
+  display: inline-block;
+  padding: 30px 50px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  min-width: 300px;
+}
+
+body.vert .carte {
+  box-shadow: 0 0 20px rgba(40, 167, 69, 0.3); /* halo vert */
+}
+
+body.rouge .carte {
+  box-shadow: 0 0 20px rgba(220, 53, 69, 0.3); /* halo rouge */
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.timestamp {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 1em;
+  color: #555;
+}
+
+.total {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #333;
+}
