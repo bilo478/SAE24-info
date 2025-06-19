@@ -17,8 +17,6 @@ ser = serial.Serial(PORT_SERIE, VITESSE_BAUD, timeout=1)
 print(f"Lecture en cours sur {PORT_SERIE}...")
 
 dernier_message = None
-reset_interval = 60 * 30  # 30 minutes
-last_reset = time.time()
 
 try:
     while True:
@@ -30,15 +28,6 @@ try:
             curseur.execute("INSERT INTO mesures (valeur) VALUES (%s)", (ligne,))
             db.commit()
             dernier_message = ligne
-
-        # Reset automatique toutes les 30 minutes
-        if time.time() - last_reset > reset_interval:
-            try:
-                response = requests.post("http://localhost/web/reset_table.php")
-                print("Reset de la table :", response.text)
-                last_reset = time.time()
-            except Exception as e:
-                print("Erreur reset :", e)
 
         time.sleep(0.1)
 

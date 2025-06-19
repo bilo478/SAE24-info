@@ -1,110 +1,202 @@
+/* Style général du corps de la page */
 body {
-  margin: 0;
-  padding-bottom: 70px;
-  font-family: 'Segoe UI', sans-serif;
-  transition: background-color 0.5s ease;
-  background-color: #f8d7da; /* par défaut : rouge clair */
-  color: #721c24;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+margin: 0;
+padding-bottom: 70px;
+font-family: 'Segoe UI', sans-serif;
+background-color: #f8d7da;
+color: #721c24;
+transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+/* Changement de couleur de fond + texte en cas de présence détectée */
 body.vert {
-  background-color: #d4edda;
-  color: #155724;
+background-color: #d4edda;
+color: #155724;
 }
 
+/* Changement de couleur de fond + texte en cas d'absence */
 body.rouge {
-  background-color: #f8d7da;
-  color: #721c24;
+background-color: #f8d7da;
+color: #721c24;
 }
 
+/* Conteneur principal centré */
 .container {
-  text-align: center;
-  padding-top: 60px;
+text-align: center;
+padding-top: 40px;
 }
 
+/* Titre principal de la page */
 h1 {
-  font-size: 2.2em;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  text-transform: uppercase;
+font-size: 2.2em;
+margin-top: 20px;
+margin-bottom: 60px;
+text-transform: uppercase;
 }
 
+/* Style des blocs "carte" (présence et graphique) */
 .carte {
-  display: inline-block;
-  padding: 30px 70px;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 0 20px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-  min-width: 300px;
+display: inline-block;
+padding: 40px 50px;
+border-radius: 12px;
+background: white;
+box-shadow: 0 0 20px rgba(0,0,0,0.15);
+transition: all 0.3s ease;
+width: 500px;
+max-width: 90%;
+height: 260px;
+box-sizing: border-box;
 }
 
+/* Halo vert autour de la carte si présence détectée */
 body.vert .carte {
-  box-shadow: 0 0 20px rgba(40, 167, 69, 0.3); /* halo vert */
+box-shadow: 0 0 20px rgba(40, 167, 69, 0.3);
 }
 
+/* Halo rouge autour de la carte si absence */
 body.rouge .carte {
-  box-shadow: 0 0 20px rgba(220, 53, 69, 0.3); /* halo rouge */
+box-shadow: 0 0 20px rgba(220, 53, 69, 0.3);
 }
 
+/* Titre dans les cartes */
 h2 {
-  margin: 0;
-  font-size: 1.8em;
-  margin-bottom: 10px;
+margin: 0;
+font-size: 1.8em;
+margin-bottom: 10px;
 }
 
+/* Texte généraux dans les cartes */
 p {
-  font-size: 1.2em;
-  margin-top: 0;
+font-size: 1.2em;
+margin-top: 0;
 }
 
+/* Horodatage (date de dernière détection) */
 .timestamp {
-  margin-top: 15px;
-  font-style: italic;
-  font-size: 1em;
-  color: #555;
+margin-top: 15px;
+font-style: italic;
+font-size: 1em;
+color: #555;
 }
 
+/* Affichage du total de présences */
 .total {
-  font-size: 1.2em;
-  margin-top: 10px;
-  color: #333;
+font-size: 1.2em;
+margin-top: 10px;
+color: #333;
 }
 
+/* Zone du bouton de réinitialisation */
 .reset-zone {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+text-align: center;
 }
 
+/* Style du bouton reset */
 #reset-btn {
-    margin-top: 5px;
-    padding: 10px 25px;
-    font-size: 1em;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+margin-top: 5px;
+padding: 10px 25px;
+font-size: 1em;
+background-color: #333;
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
+/* Survol du bouton : couleur plus foncée */
 #reset-btn:hover {
-    background-color: #000;
+background-color: #000;
 }
 
+/* Message de confirmation après clic sur reset */
 #reset-confirm {
-    margin-top: 8px;
-    font-size: 0.9em;
-    color: #666;
-    display: none;
+margin-top: 8px;
+font-size: 0.9em;
+color: #666;
+display: none;
 }
 
+/* Ligne horizontale avant le bouton reset */
 .reset-zone::before {
-    content: "";
-    display: block;
-    width: 50%;
-    margin: 0 auto 20px;
-    border-top: 2px solid #2f2f2f;
+content: "";
+display: block;
+width: 50%;
+margin: 0 auto 20px;
+border-top: 2px solid #2f2f2f;
 }
+
+/* Disposition flexible pour organisation horizontale des blocs */
+.main-flex {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+align-items: flex-start;
+margin-bottom: 40px;
+}
+
+/* Zone contenant le graphique */
+.graph-zone {
+background: white;
+padding: 25px 40px;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(0,0,0,0.1);
+min-width: 400px;
+max-width: 100%;
+}
+
+/* Titre du graphique */
+.graph-zone h3 {
+margin-top: 0;
+font-size: 1.5em;
+text-align: center;
+}
+
+/* Disposition en ligne des deux blocs (présence et graphique) */
+.ligne {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 80px;
+flex-wrap: wrap;
+margin-bottom: 60px;
+}
+
+/* Style commun pour les cartes et le graphique */
+.carte, .graphique {
+background: white;
+padding: 50px 60px;
+border-radius: 15px;
+box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+width: 520px;
+height: 300px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+/* Canvas (zone de dessin du graphique) */
+.graphique canvas {
+width: 100% !important;
+height: 200px !important;
+}
+
+/* Titre au-dessus du graphique */
+.graphique h3 {
+margin-bottom: 20px;
+text-align: center;
+font-size: 1.4em;
+}
+
+
+/* Graphique responsive */
+#chart {
+max-width: 100%;
+height: 250px;
+}
+
+/* Adaptation sur les écrans larges (≥900px) */
