@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding-bottom: 70px;
   font-family: 'Segoe UI', sans-serif;
   transition: background-color 0.5s ease;
   background-color: #f8d7da; /* par défaut : rouge clair */
@@ -18,18 +19,19 @@ body.rouge {
 
 .container {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 h1 {
   font-size: 2.2em;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 60px;
   text-transform: uppercase;
 }
 
 .carte {
   display: inline-block;
-  padding: 30px 50px;
+  padding: 30px 70px;
   border-radius: 12px;
   background: white;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
@@ -67,4 +69,41 @@ p {
   font-size: 1.2em;
   margin-top: 10px;
   color: #333;
+}
+
+.reset-zone {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#reset-btn {
+    margin-top: 5px;
+    padding: 10px 25px;
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+    background-color: #000;
+}
+
+#reset-confirm {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+    display: none;
+}
+
+.reset-zone::before {
+    content: "";
+    display: block;
+    width: 50%;
+    margin: 0 auto 20px;
+    border-top: 2px solid #2f2f2f;
 }
