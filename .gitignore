@@ -198,6 +198,3 @@ cython_debug/
 
 # Mesure de sécurité pour la configuration de connexion de Python vers MySQL et PHP vers MySQL
 db_config.py
-
-# Mesure de sécurité pour la configuration de connexion de PHP vers MySQL
-db_config.php
