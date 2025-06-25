@@ -195,6 +195,3 @@ cython_debug/
 
 # PHPMyAdmin
 /web/phpmyadmin/
-
-# Mesure de sécurité pour la configuration de connexion de Python vers MySQL et PHP vers MySQL
-db_config.py
